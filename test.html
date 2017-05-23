@@ -1,0 +1,23 @@
+<html>
+<head>
+<title>Test of QR Scanner</title>
+<script src="https://dwa012.github.io/html5-qrcode/javascripts/jquery-1.9.1.min.js"></script>
+<script src="https://dwa012.github.io/html5-qrcode/javascripts/html5-qrcode.min.js"></script>
+<script>
+function scan() {
+    $('#reader').html5_qrcode(function(data){
+        $('#read').html(data);
+    },
+    function(error){
+        $('#read_error').html(error);
+    }, function(videoError){
+        $('#vid_error').html(videoError);
+    }
+)
+</script>
+</head>
+<body>
+
+<div id="reader" style="width:300px;height:250px">
+</div>
+</body>
